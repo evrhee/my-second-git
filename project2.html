@@ -135,7 +135,8 @@
     </section>
 
     <section>
-  <h2>Experience</h2>
+  
+  <h2 class="clickable">Experience</h2>
   <p>Developed STEAM projects combining math, art, and technology
 Built architectural models and prototypes
 Worked with laser cutting and 3D printing technologies
@@ -144,7 +145,8 @@ Created artistic works using mathematical concepts such as geometry and symmetry
 </section>
 
 <section>
-  <h2>Background</h2>
+  
+  <h2 class="clickable">Background</h2>
   <p>Mathematics and Music major
 Strong interest in art, painting, and music
 Interested in the intersection of creativity and analytical thinking</p>
@@ -163,5 +165,18 @@ Interested in the intersection of creativity and analytical thinking</p>
     </footer>
 
   </div>
+<script>
+  document.querySelectorAll('.clickable').forEach(heading => {
+    heading.style.cursor = 'pointer';
+    heading.addEventListener('click', function() {
+      const content = this.nextElementSibling;
+      if (content.style.display === 'none') {
+        content.style.display = 'block';
+      } else {
+        content.style.display = 'none';
+      }
+    });
+  });
+</script>
 </body>
 </html> 
